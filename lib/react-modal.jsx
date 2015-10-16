@@ -1,7 +1,7 @@
 Modal = React.createClass({
   render () {
     return (
-      <div className="md-modal md-effect-1" id="modal-1">
+      <div className="md-modal md-effect-1" id={this.props.id}>
         <div className="md-content">
           <h3>{this.props.title}</h3>
           <div className="md-body">
