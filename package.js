@@ -14,7 +14,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.0.2');
 
   api.use([
-    "react",
+    "react@0.1.13",
     "jquery"
   ]);
 
