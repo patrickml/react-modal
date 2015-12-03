@@ -1,6 +1,6 @@
 ##React Modal
 
-This is a lightweight stylish modal that is < 4kb
+This is a lightweight stylish modal
 
 ![enter image description here](photo.png)
 
@@ -8,16 +8,82 @@ This is a lightweight stylish modal that is < 4kb
 
 ###How to use
 
-Add the following line to any `jsx` file and change the content to some other React Class that you would like to render in the modal
+####Enclosed Modal
 
-`< Modal title="React Modal" content={ < SomeContent /> } id="modal-1"/>`
+An enclosed modal is one where the state is enclosed in the same component as the rendering of the modal. For this you can use the `ReactModalMixin` provided with this package. A component with the `ReactModalMixin` will inherit the state `openModal` and the functions `openModal` and `closeModal` which set the state accordingly
 
-You can trigger the modal by adding the following to any html element
+```jsx
+EnclosedModal = React.createClass({
+  mixins : [ReactModalMixin],
+  render () {
+      return (
+        <div>
+          <button onClick={ this.openModal }>Open Enclosed Modal</button>
+          <Modal
+            isOpen={ this.state.isOpen }
+            close={ this.closeModal }
+            title="Demo Enclosed Modal">
+            <p>This modal and all of its functionality are enclosed in the 'EnclosedModal' loading the 'ReactModalMixin' which controls the open and closed state.</p>
+            <button onClick={ this.closeModal }>Click Here to Close</button>
+          </Modal>
+        </div>
+      );
+  }
+});
 
-`className="md-trigger" data-modal="modal-1"`
+```
 
-Example
+####Controlled Modal
+A Controlled Modal is one that is controlled by a parent component and the properties are passed to the Modal via properties.
 
-`<a href="#" className="md-trigger" data-modal="modal-1">Description</a>`
+#####Controlled Modal JSX
+```jsx
+ControlledModal = React.createClass({
+  render () {
+    return (
+      <div>
+        <Modal
+          isOpen={ this.props.isOpen }
+          close={ this.props.closeModal }
+          title="Demo Controlled Modal">
+          <p>This modal is controlled by the parent component. It can be opened and closed by padding props to the component</p>
+          <button onClick={ this.props.closeModal }>Click Here to Close</button>
+        </Modal>
+      </div>
+    );
+  }
+});
+```
 
+#####Parent Component for Controlled Modal
 
+```jsx
+ModalPage = React.createClass({
+  getInitialState () {
+    return {
+      controlledModalOpen : false
+    };
+  },
+  openModal () {
+    this.setState({
+      controlledModalOpen : true
+    });
+  },
+  closeModal () {
+    this.setState({
+      controlledModalOpen : false
+    });
+  },
+  render () {
+    return (
+      <div>
+        <ControlledModal closeModal={ this.closeModal } isOpen={ this.state.controlledModalOpen } />
+        <button onClick={ this.openModal }>Open Controlled Modal</button>
+      </div>
+    );
+  }
+});
+```
+
+Demo
+[http://react-modal.meteor.com/](http://react-modal.meteor.com/)
