@@ -1,4 +1,4 @@
-##React Modal
+## React Modal
 
 This is a lightweight stylish modal
 
@@ -6,9 +6,9 @@ This is a lightweight stylish modal
 
 `meteor add patrickml:react-modal`
 
-###How to use
+### How to use
 
-####Enclosed Modal
+#### Enclosed Modal
 
 An enclosed modal is one where the state is enclosed in the same component as the rendering of the modal. For this you can use the `ReactModalMixin` provided with this package. A component with the `ReactModalMixin` will inherit the state `openModal` and the functions `openModal` and `closeModal` which set the state accordingly
 
@@ -33,10 +33,10 @@ EnclosedModal = React.createClass({
 
 ```
 
-####Controlled Modal
+#### Controlled Modal
 A Controlled Modal is one that is controlled by a parent component and the properties are passed to the Modal via properties.
 
-#####Controlled Modal JSX
+##### Controlled Modal JSX
 ```jsx
 ControlledModal = React.createClass({
   render () {
@@ -55,7 +55,7 @@ ControlledModal = React.createClass({
 });
 ```
 
-#####Parent Component for Controlled Modal
+##### Parent Component for Controlled Modal
 
 ```jsx
 ModalPage = React.createClass({
