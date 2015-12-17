@@ -27,60 +27,65 @@
   visibility: visible;
 }
 
-.md-content {
-  color: #fff;
-  background: #4A85D4;
-  position: relative;
-  border-radius: 3px;
-  margin: 0 auto;
-  h3 {
-    margin: 0;
-    padding: 0.4em;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 300;
-    opacity: 0.8;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 3px 3px 0 0;
-  }
-  .md-body {
-    margin: 0;
-    font-weight: 300;
-    font-size: 1.15em;
-    border-radius: 3px;
-    padding: 15px;
-    overflow-y: auto;
-  }
-  .close {
-    position: absolute;
-    top: -31px;
-    right: 0;
-    border: solid 1px #fff;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 25px;
-    border-radius: 360px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  button {
-    border: none;
-    padding: 0.6em 1.2em;
-    background: #4A85D4;
+.default-theme {
+  .md-content {
     color: #fff;
-    font-family: 'Open Sans', Calibri, Arial, sans-serif;
-    font-size: .75em;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline-block;
-    margin: 3px 2px;
-    border-radius: 2px;
-    &:focus {
-      outline: 0;
+    background: #4A85D4;
+    position: relative;
+    border-radius: 3px;
+    .md-title {
+      margin: 0;
+      padding: 0.4em;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: 300;
+      opacity: 0.8;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px 3px 0 0;
+    }
+    .md-body {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.15em;
+      border-radius: 3px;
+      padding: 15px;
+      overflow-y: auto;
+    }
+    .md-close {
+      position: absolute;
+      top: -31px;
+      right: 0;
+      border: solid 1px #fff;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 360px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button {
+      border: none;
+      padding: 0.6em 1.2em;
+      background: #4A85D4;
+      color: #fff;
+      font-family: 'Open Sans', Calibri, Arial, sans-serif;
+      font-size: .75em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-block;
+      margin: 3px 2px;
+      border-radius: 2px;
+      &:focus {
+        outline: 0;
+      }
     }
   }
+}
+
+.md-content {
+  margin: 0 auto;
 }
 
 .md-modal-enter {

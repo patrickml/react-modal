@@ -19,7 +19,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(0,0,0,0.42);
+  background: rgba(0, 0, 0, 0.42);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -27,15 +27,14 @@
   visibility: visible;
 }
 
-.md-content {
+.default-theme .md-content {
   color: #fff;
   background: #4A85D4;
   position: relative;
   border-radius: 3px;
-  margin: 0 auto;
 }
 
-.md-content h3 {
+.default-theme .md-content .md-title {
   margin: 0;
   padding: 0.4em;
   text-align: center;
@@ -46,7 +45,7 @@
   border-radius: 3px 3px 0 0;
 }
 
-.md-content .md-body {
+.default-theme .md-content .md-body {
   margin: 0;
   font-weight: 300;
   font-size: 1.15em;
@@ -55,7 +54,7 @@
   overflow-y: auto;
 }
 
-.md-content .close {
+.default-theme .md-content .md-close {
   position: absolute;
   top: -31px;
   right: 0;
@@ -69,7 +68,7 @@
   font-size: 14px;
 }
 
-.md-content button {
+.default-theme .md-content button {
   border: none;
   padding: 0.6em 1.2em;
   background: #4A85D4;
@@ -84,8 +83,12 @@
   border-radius: 2px;
 }
 
-.md-content button:focus {
+.default-theme .md-content button:focus {
   outline: 0;
+}
+
+.md-content {
+  margin: 0 auto;
 }
 
 .md-modal-enter .md-content {

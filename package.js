@@ -1,6 +1,6 @@
 Package.describe({
   name: 'patrickml:react-modal',
-  version: '2.0.0',
+  version: '2.1.0',
   summary: 'Lightweight ReactJS Modal',
   git: 'https://github.com/patrickml/react-modal',
   documentation: 'README.md'

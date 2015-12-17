@@ -8,6 +8,51 @@ This is a lightweight stylish modal
 
 ### How to use
 
+####Theming
+
+As of version 2.1 we have added `theming` in order to allow for everyone to make their own style with this lightweight modal system.
+
+In order to declare your theme just add a `prop` to the `<Modal />` component like so
+
+```jsx
+<Modal
+  isOpen={ instance.state.isOpen }
+  close={ instance.closeModal }
+  title={ instance.props.title }
+  theme="flex-theme"
+  options={{
+    style : {
+      maxWidth : '300px'
+    }
+  }}
+  >
+```
+
+In order to create a theme simply start with these classes to your stylesheets
+
+```scss
+.flex-theme.md-modal {
+  .md-content {
+    .md-title {
+    }
+    .md-body {
+      form {
+        input[type="text"] {
+        }
+      }
+      button {
+
+      }
+      .md-footer {
+        .button {
+
+        }
+      }
+    }
+  }
+}
+```
+
 #### Enclosed Modal
 
 An enclosed modal is one where the state is enclosed in the same component as the rendering of the modal. For this you can use the `ReactModalMixin` provided with this package. A component with the `ReactModalMixin` will inherit the state `openModal` and the functions `openModal` and `closeModal` which set the state accordingly
