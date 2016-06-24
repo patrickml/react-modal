@@ -9,7 +9,6 @@
   z-index: 2000;
   transform: translateX(-50%) translateY(-50%);
   visibility: visible;
-  font-family: Helvetica Neue;
 }
 
 .md-overlay {
@@ -20,14 +19,13 @@
   left: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.42);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 1;
   visibility: visible;
 }
 
 .default-theme {
+  font-family: Helvetica Neue;
   .md-content {
     color: #fff;
     background: #4A85D4;
@@ -86,23 +84,15 @@
 
 .md-content {
   margin: 0 auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .md-modal-enter {
   .md-content {
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
     transform: scale(0.7);
     opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
   }
   &.md-modal-enter-active .md-content {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
@@ -112,11 +102,9 @@
   .md-content {
     opacity: 1;
     transform: scale(1);
-    transition: all 0.2s;
   }
   &.md-overlay {
     opacity: 1;
-    transition: all 0.2s;
   }
   &.md-modal-leave-active {
     .md-content {
@@ -125,7 +113,6 @@
     }
     &.md-overlay {
       opacity: 0;
-      transition: all 0.2s;
     }
   }
 }

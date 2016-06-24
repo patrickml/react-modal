@@ -10,9 +10,9 @@ ecmascript-runtime@0.2.6
 ejson@1.0.7
 jquery@1.11.4
 jsx@0.2.3
-local-test:patrickml:react-modal@2.0.0
+local-test:patrickml:react-modal@2.1.0
 meteor@1.1.10
-patrickml:react-modal@2.0.0
+patrickml:react-modal@2.1.0
 promise@0.5.1
 random@1.0.5
 react@0.2.1
